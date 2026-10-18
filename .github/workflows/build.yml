@@ -48,15 +48,17 @@ jobs:
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
 
-      - name: Install dependencies & Build Tauri
+      - name: Install dependencies & Build EXE
         working-directory: ./windows
         run: |
-          npm install -g @tauri-apps/cli
-          # agar package.json to'liq bo'lsa build qiladi
-          echo "Building Windows app..."
+          npm install
+          npx tauri build --debug
 
-      - name: Upload Windows Artifacts (Stub/Source)
+      - name: Upload Windows EXE
         uses: actions/upload-artifact@v4
         with:
-          name: jarvis-windows-bundle
-          path: windows/
+          name: jarvis-windows-exe
+          path: |
+            windows/src-tauri/target/debug/*.exe
+            windows/src-tauri/target/debug/bundle/nsis/*.exe
+            windows/src-tauri/target/debug/bundle/msi/*.msi
