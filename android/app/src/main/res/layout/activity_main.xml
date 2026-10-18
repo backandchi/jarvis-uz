@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#0A0A0F">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🤖 JARVIS"
+        android:textSize="28sp"
+        android:textColor="#4FC3F7"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔍 Qidirilmoqda..."
+        android:textColor="#B0BEC5"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:paddingBottom="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1A1A2E"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AGENT HOLATI"
+            android:textColor="#7B8CDE"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/agentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🟢 Hech narsa ishlamayapti"
+            android:textColor="#E0E0E0"
+            android:textSize="14sp"
+            android:paddingBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAllow"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="✅ RUXSAT"
+                android:backgroundTint="#1B5E20"
+                android:textColor="#A5D6A7"
+                android:enabled="false"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnDeny"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="❌ RAD ETISH"
+                android:backgroundTint="#B71C1C"
+                android:textColor="#EF9A9A"
+                android:enabled="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#13131A"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/chatView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#CFD8DC"
+            android:textSize="13sp"
+            android:lineSpacingExtra="4dp"/>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/chatInput"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:hint="Yozing..."
+            android:textColor="#E0E0E0"
+            android:hintTextColor="#607D8B"
+            android:background="#1E1E2E"
+            android:paddingStart="12dp"
+            android:paddingEnd="8dp"
+            android:layout_marginEnd="6dp"
+            android:inputType="text"
+            android:imeOptions="actionSend"/>
+
+        <Button
+            android:id="@+id/chatSend"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:text="➤"
+            android:backgroundTint="#4FC3F7"
+            android:textColor="#0A0A0F"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnMic"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="🎤  JARVISGA BUYRUQ"
+        android:backgroundTint="#7B8CDE"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>
